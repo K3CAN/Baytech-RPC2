@@ -77,7 +77,7 @@ command_line:
 
 **FINALLY**, I had an effective and _sane_ way to trigger my commands from the HA interface.
 
-![My outlets in a Home Assistant "Glance" card](/Baytech-RPC2/ha-card.png)
+![My outlets in a Home Assistant "Glance" card](/ha-card.png)
 
 ## Next steps
 Now that it's all working, the next step is deciding how to make this a persistent part of my HA instance. As mentioned, HA itself runs within a Docker container, so it's normal process of pulling a new image for each update means that my changes will get erased every time it updates. 
