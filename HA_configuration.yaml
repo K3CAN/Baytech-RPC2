@@ -1,25 +1,25 @@
 command_line:
     - switch:
         name: RPC Outlet 1
-        command_on: '/usr/local/bin/rpcoutlets on 1'
-        command_off: '/usr/local/bin/rpcoutlets off 1'
+        command_on: '/config/my_scripts/rpcoutlets on 1'
+        command_off: '/config/my_scripts/rpcoutlets off 1'
     - switch:
         name: RPC Outlet 2
-        command_on: '/usr/local/bin/rpcoutlets on 2'
-        command_off: '/usr/local/bin/rpcoutlets off 2'
+        command_on: '/config/my_scripts/rpcoutlets on 2'
+        command_off: '/config/my_scripts/rpcoutlets off 2'
     - switch:
         name: RPC Outlet 3
-        command_on: '/usr/local/bin/rpcoutlets on 3'
-        command_off: '/usr/local/bin/rpcoutlets off 3'
+        command_on: '/config/my_scripts/rpcoutlets on 3'
+        command_off: '/config/my_scripts/rpcoutlets off 3'
     - switch:
         name: RPC Outlet 5
-        command_on: '/usr/local/bin/rpcoutlets on 5'
-        command_off: '/usr/local/bin/rpcoutlets off 5'
+        command_on: '/config/my_scripts/rpcoutlets on 5'
+        command_off: '/config/my_scripts/rpcoutlets off 5'
     - switch:
         name: RPC Outlet 4
-        command_on: '/usr/local/bin/rpcoutlets on 4'
-        command_off: '/usr/local/bin/rpcoutlets off 4'
+        command_on: '/config/my_scripts/rpcoutlets on 4'
+        command_off: '/config/my_scripts/rpcoutlets off 4'
     - switch:
         name: RPC Outlet 6
-        command_on: '/usr/local/bin/rpcoutlets on 6'
-        command_off: '/usr/local/bin/rpcoutlets off 6'
+        command_on: '/config/my_scripts/rpcoutlets on 6'
+        command_off: '/config/my_scripts/rpcoutlets off 6'

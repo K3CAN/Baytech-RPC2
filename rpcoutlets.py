@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import serial
 import sys
 import re
@@ -24,4 +26,4 @@ with serial.Serial(tty, baudrate=9600, bytesize=8, stopbits=1, timeout=1) as por
         print(map[sys.argv[2]]["state"])
 
     else:
-        print("Invalid syntax. Ex: rpcoutlets (on|off|read) (1...6)")
+        print("Invalid syntax. Ex: rpcoutlets (on|off|read) (1..6)")
