@@ -10,7 +10,7 @@ Information about the physical connections can be found in the [/physical](/phys
 
 Installation is as simple as adding the [script](/rpcoutlets.py) to the /config folder of Home Assistant (or a subdirectory) and then adding the individual commands to the configuation.yaml. 
 
-Example configuration.yaml, assuming that the script was added to /congif/myscripts/
+Example configuration.yaml, assuming that the script was added to /congif/my_scripts/
 
 ```
 command_line:
@@ -54,9 +54,9 @@ If you would like to try adding polling to your instance, you can expand each li
 command_line:
   - switch:
       name: RPC Outlet 1
-      command_on: "/config/my_scripts/rpcoutlets.py.py on 1"
-      command_off: "/config/my_scripts/rpcoutlets.py.py off 1"
-      command_state: '/config/my_scripts/rpcoutlets.py.py read 1'
+      command_on: "/config/my_scripts/rpcoutlets.py on 1"
+      command_off: "/config/my_scripts/rpcoutlets.py off 1"
+      command_state: '/config/my_scripts/rpcoutlets.py read 1'
       value_template: '{{ value == "On" }}'
       scan_interval: 500
 ```
