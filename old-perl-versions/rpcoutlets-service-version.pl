@@ -1,13 +1,16 @@
 #!/usr/bin/perl
 
+#Serial port settings:
+#stty -F /dev/ttyUSB0 0:4:cbd:a30:3:1c:7f:15:4:0:1:0:11:13:1a:0:12:f:17:16:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0
+
 #This requires lm_sensors to monitor temperature. 
 
 use strict;
 use Device::SerialPort;
 
-my $limit = 55; #temp limit for "Service mode"
+my $limit = 55;
 my $delay = 5; #time in minutes between checks.
-my $fanport = 5; #where the case fan is plugged in for service mode
+my $fanport = 5;
 
 my $port = new Device::SerialPort ("/dev/ttyUSB0") || die "can't open device";
 $port->baudrate(9600); # 
@@ -23,11 +26,11 @@ sleep(2);
 if ("$ARGV[0] $ARGV[1]" =~ /[on|off] [1-6]/) {
 	print "Turning $ARGV[0] outlet number $ARGV[1]\n";
 	$port->write("$ARGV[0] $ARGV[1]\r\n");
-	sleep(1);				#The RPC-2 really doesn't like to receive commands too quickly... 
+	sleep(1);
 	$port->write("y\r\n");
 } else {
 	my $fan;
-#If this is run without arguments, assume that we want to control the case fan (service mode).
+#If this is run without arguments, assume that we want to control the case fan.
 	while() {
 		`sensors | grep Package` =~ m/\+(\d{1,3}\.\d+)/i;
 		warn "cpu temp is $1\n";
